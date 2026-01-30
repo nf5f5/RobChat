@@ -1,0 +1,11 @@
+<h2>Admin Maps</h2>
+<form method="post">
+<input name="name">
+<button>Add Map</button>
+</form>
+
+<ul>
+{% for m in maps %}
+<li>{{m[1]}}</li>
+{% endfor %}
+</ul>
