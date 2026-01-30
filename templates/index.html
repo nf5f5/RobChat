@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Roblox Chat</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="left">
+<div class="logo">ROBLOX CHAT</div>
+
+<h3>Choose Map / اختر ماب</h3>
+
+<form action="/join" method="post">
+<input name="username" placeholder="Roblox Username / اسم روبلوكس" required>
+
+<select name="map">
+{% for m in maps %}
+<option value="{{m[0]}}">{{m[1]}}</option>
+{% endfor %}
+</select>
+
+<button class="join">Join Chat / دخول</button>
+</form>
+
+<a href="/admin"><button>Admin Panel</button></a>
+</div>
+
+<div class="right">
+<div class="welcomeBox">
+<h2>Welcome to the chat</h2>
+<p>أهلاً بكم في دردشة تشي</p>
+</div>
+</div>
+
+</div>
+</body>
+  </html>
