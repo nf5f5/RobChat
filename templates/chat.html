@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="chatbox">
+
+<img src="{{avatar}}" class="avatar">
+<h3>{{user}}</h3>
+
+<div id="msgs"></div>
+
+<input id="t">
+<button onclick="sendMsg()">Send</button>
+
+</div>
+
+<script>
+var s = io();
+s.emit("join");
+
+function sendMsg(){
+ let v=document.getElementById("t").value;
+ s.emit("msg","{{user}}: "+v);
+}
+
+s.on("message", m=>{
+ document.getElementById("msgs").innerHTML += "<div class='msg'>"+m+"</div>";
+});
+</script>
+
+</body>
+</html>
