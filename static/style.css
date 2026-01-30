@@ -1,0 +1,10 @@
+body{background:#0f1115;color:white;font-family:sans-serif;margin:0}
+.container{display:flex;height:100vh}
+.left{width:40%;background:#151922;padding:20px}
+.right{width:60%;padding:20px}
+.logo{font-size:28px;font-weight:bold;background:#e53935;padding:12px;border-radius:10px;text-align:center}
+.join{width:100%;padding:14px;background:#ff6a00;border:0;border-radius:12px;margin-top:10px}
+.welcomeBox{background:#1b2130;padding:20px;border-radius:14px}
+.chatbox{width:400px;margin:40px auto;background:#1a1a1a;padding:20px;border-radius:12px}
+.msg{background:#222;padding:8px;border-radius:8px;margin:5px 0}
+.avatar{width:80px;border-radius:12px}
